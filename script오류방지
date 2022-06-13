@@ -1,0 +1,16 @@
+<script>
+
+var UserVO = {
+  name : '김아무개'
+  age : 20
+  grade : {admin : 'CS_admin'}
+  //description : {abc : }
+}
+
+console.log(UserVO.age); // 데이터 추출
+console.log(UserVO.grade?.admin); //?.을 해줌으로써 해당 데이터 값이 null 일때 오류로 코드 진행을 막는 것이 아닌, undefined를 출력하고 후의 코드를 실행시킴Use
+console.log(UserVO.grade.admin ?? '데이터 업다'); // ??을 해줌으로써 해당 데이터가 null일 경우 우측에 선언한 것으로 대체하여 출력하고 코드를 진행시킴.
+
+// ?. 는 xxx.xxx.xxx 등의 .이 두번이상 쓰였을때 쉽게 오류가 날 수 있는 상황에서 코드를 진행시켜주기 위함
+// ?? 는 수신한 데이터가 늦게 도착하여 데이터파싱에 오류가 생기는 것을 방지하고 데이터가 null로 오류가나는 것을 방지하는 등의 기능과 함께 대체제를 출력시킴.
+</script>
